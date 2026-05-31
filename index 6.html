@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA–EU Youth Forum 2026 | Самарканд</title>
+<meta name="description" content="Центральноазиатско-Европейский молодёжный форум 2026 — Самарканд, Узбекистан, 13–14 августа 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════════════
+   🎨 ЦВЕТА — меняйте только здесь!
+   ══════════════════════════════════════════════
+   Как поменять цвет акцента (золото):
+   Найдите --c-gold и замените #B8894A на любой цвет.
+   
+   Как поменять основной цвет (синий):
+   Найдите --c-navy и замените #1B3A5C.
+   ══════════════════════════════════════════════ */
+:root {
+  /* Основные цвета */
+  --c-navy:       #1B3A5C;   /* Тёмно-синий — заголовки, nav */
+  --c-navy-deep:  #0F2540;   /* Очень тёмный — hover эффекты */
+  --c-blue:       #2D6BA0;   /* Средний синий — ссылки */
+  --c-blue-light: #EBF3FA;   /* Очень светлый синий — фоны секций */
+
+  /* Акцентный цвет (золото/бронза) */
+  --c-gold:       #B8894A;   /* Основное золото */
+  --c-gold-light: #D4A96A;   /* Светлее — hover */
+  --c-gold-pale:  #F5EDD8;   /* Очень бледное — фоны тегов */
+
+  /* Нейтральные */
+  --c-white:      #FFFFFF;
+  --c-cream:      #FAFAF7;   /* Тёплый белый — чередующийся фон */
+  --c-gray-light: #F0EDE8;   /* Светло-серый — разделители */
+  --c-gray:       #7A8899;   /* Серый — вспомогательный текст */
+  --c-text:       #1A2B3C;   /* Основной цвет текста */
+
+  /* Типографика */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Onest', system-ui, sans-serif;
+
+  /* Прочее */
+  --shadow-sm:  0 2px 12px rgba(27,58,92,0.08);
+  --shadow-md:  0 6px 30px rgba(27,58,92,0.12);
+  --shadow-lg:  0 16px 60px rgba(27,58,92,0.16);
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--c-text);
+  background: var(--c-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════
+   НАВИГАЦИЯ
+   ══════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(27,58,92,0.10);
+  box-shadow: 0 2px 20px rgba(27,58,92,0.06);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+.nav-logo-badge {
+  width: 42px; height: 42px;
+  background: var(--c-navy);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700;
+  color: var(--c-gold-light);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-align: center;
+}
+.nav-logo-text {
+  color: var(--c-navy);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.nav-logo-text span {
+  color: var(--c-gray);
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+}
+.nav-links {
+  display: flex; gap: 2px; list-style: none;
+}
+.nav-links a {
+  color: var(--c-navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 13px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  color: var(--c-gold);
+  background: var(--c-gold-pale);
+}
+.nav-cta {
+  background: var(--c-navy) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 9px !important;
+  padding: 8px 18px !important;
+}
+.nav-cta:hover {
+  background: var(--c-gold) !important;
+  color: white !important;
+}
+.nav-lang {
+  display: flex; gap: 4px; margin-left: 14px;
+}
+.nav-lang button {
+  background: none;
+  border: 1.5px solid var(--c-gray-light);
+  color: var(--c-gray);
+  font-size: 12px; font-weight: 600;
+  padding: 4px 9px; border-radius: 6px;
+  cursor: pointer; transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.nav-lang button.active,
+.nav-lang button:hover {
+  background: var(--c-navy);
+  color: white;
+  border-color: var(--c-navy);
+}
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  width: 24px; height: 2px;
+  background: var(--c-navy);
+  border-radius: 2px; transition: all 0.3s;
+}
+
+/* ══════════════════════════════════════
+   HERO — ГЛАВНЫЙ ЭКРАН
+   ══════════════════════════════════════
+   🖼️ КАК ПОМЕНЯТЬ ФОТО ФОНА:
+   Найдите ниже строку background-image: url(...)
+   Замените путь на своё фото:
+   url('images/your-photo.jpg')
+   или укажите URL: url('https://...')
+   ══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center;
+  padding-top: 70px;
+
+  /* ↓↓↓ ФОТО ФОНА — замените путь на своё фото ↓↓↓ */
+  background-image: url('registan-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+/* Тёмный градиент поверх фото — делает текст читаемым */
+/* 🎨 Меняйте rgba(0,0,0, X) где X = 0.0–1.0 для яркости затемнения */
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(15,37,64,0.82) 0%,
+    rgba(15,37,64,0.60) 50%,
+    rgba(15,37,64,0.30) 100%
+  );
+}
+
+/* Декоративный узор поверх */
+.hero-pattern {
+  position: absolute; inset: 0; z-index: 1;
+  background-image:
+    radial-gradient(circle at 75% 50%, rgba(184,137,74,0.08) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 55px);
+}
+
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 5rem 2rem 7rem;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;
+  position: relative; z-index: 3;
+}
+
+/* Пометка вверху Hero */
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.30);
+  border-radius: 30px;
+  padding: 7px 18px;
+  font-size: 12px; font-weight: 600;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+.hero-dot {
+  width: 7px; height: 7px;
+  background: var(--c-gold-light);
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+/* Главный заголовок */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.8vw, 4rem);
+  font-weight: 900;
+  color: var(--c-white);
+  line-height: 1.08;
+  margin-bottom: 1.3rem;
+  letter-spacing: -0.5px;
+}
+.hero-title .line-accent {
+  color: var(--c-gold-light);
+  font-style: italic;
+}
+
+/* Подзаголовок */
+.hero-subtitle {
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+/* Метки: место, дата, страны */
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2.5rem;
+}
+.hero-meta-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 0.86rem; font-weight: 500;
+  color: white;
+  backdrop-filter: blur(6px);
+}
+.hero-meta-chip svg {
+  width: 15px; height: 15px; flex-shrink: 0;
+  fill: var(--c-gold-light);
+}
+
+/* Кнопки */
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--c-gold);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: all 0.25s;
+  letter-spacing: 0.2px;
+}
+.btn-primary:hover {
+  background: var(--c-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184,137,74,0.35);
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.10);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem; font-weight: 500;
+  cursor: pointer; text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s;
+  backdrop-filter: blur(8px);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: white;
+}
+
+/* Карточка справа Hero */
+.hero-card {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+}
+.hero-card-flags {
+  display: flex; gap: 7px; margin-bottom: 1.5rem;
+}
+.flag {
+  width: 40px; height: 27px; border-radius: 4px; overflow: hidden;
+  display: flex; flex-direction: column; flex-shrink: 0;
+}
+.flag-uz { background: linear-gradient(to bottom, #1EB6E8 33.3%, #fff 33.3%, #fff 66.6%, #44AE42 66.6%); position: relative; }
+.flag-uz::after { content: ''; position: absolute; left: 4px; top: 4px; width: 8px; height: 8px; background: white; border-radius: 50%; }
+.flag-eu { background: #003399; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #FFCC00; font-weight: 700; }
+.flag-kz { background: #00AFCA; }
+.flag-kg { background: #E8112D; }
+.flag-tj { background: linear-gradient(to bottom, #C30017 33.3%, #fff 33.3%, #fff 66.6%, #006600 66.6%); }
+.flag-tm { background: #30A956; }
+
+.hero-stat-big {
+  text-align: center; margin-bottom: 1.2rem;
+}
+.hero-stat-big .num {
+  font-family: var(--font-display);
+  font-size: 3.2rem; font-weight: 900;
+  color: var(--c-gold-light); line-height: 1;
+}
+.hero-stat-big .lbl {
+  color: rgba(255,255,255,0.70); font-size: 0.88rem; margin-top: 4px;
+}
+.hero-divider {
+  border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 1.2rem 0;
+}
+.hero-dates {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.4rem;
+}
+.date-box {
+  background: rgba(184,137,74,0.18);
+  border: 1px solid rgba(184,137,74,0.30);
+  border-radius: 10px; padding: 12px; text-align: center;
+}
+.date-box .day {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 700;
+  color: var(--c-gold-light); line-height: 1;
+}
+.date-box .mth { color: rgba(255,255,255,0.65); font-size: 0.78rem; margin-top: 3px; }
+
+/* Счётчик обратного отсчёта */
+.countdown {
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px; padding: 1rem;
+  text-align: center;
+}
+.countdown-lbl {
+  color: rgba(255,255,255,0.55); font-size: 0.75rem;
+  text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 10px;
+}
+.countdown-nums { display: flex; gap: 7px; justify-content: center; }
+.cd-unit {
+  background: rgba(255,255,255,0.10);
+  border-radius: 8px; padding: 8px 10px; min-width: 50px;
+}
+.cd-unit .n {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 700; color: white; line-height: 1;
+}
+.cd-unit .l { font-size: 0.62rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+/* Нижний волнистый переход */
+.hero-wave {
+  position: absolute; bottom: -1px; left: 0; right: 0; z-index: 4;
+}
+
+/* ══════════════════════════════════════
+   СЕКЦИИ — общие стили
+   ══════════════════════════════════════ */
+section { padding: 5.5rem 1.5rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: var(--c-navy);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-sub {
+  font-size: 1.02rem;
+  color: var(--c-gray);
+  max-width: 570px;
+  line-height: 1.75;
+}
+.text-center { text-align: center; }
+.text-center .section-sub { margin: 0 auto; }
+
+/* Кнопки для светлых секций */
+.btn-dark {
+  background: var(--c-navy);
+  color: white; border: none;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.93rem; font-weight: 600;
+  cursor: pointer; text-decoration: none; display: inline-block;
+  transition: all 0.25s;
+}
+.btn-dark:hover { background: var(--c-gold); transform: translateY(-2px); }
+
+/* ══════════════════════════════════════
+   ПОЛОСА СТАТИСТИКИ
+   ══════════════════════════════════════ */
+.stats-bar {
+  background: var(--c-navy);
+  padding: 2.5rem 1.5rem;
+}
+.stats-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+}
+.stat-item { text-align: center; padding: 1.2rem 1rem; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.6rem; font-weight: 900;
+  color: var(--c-gold-light); line-height: 1;
+}
+.stat-lbl { color: rgba(255,255,255,0.65); font-size: 0.88rem; margin-top: 6px; }
+.stat-sep {
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: auto;
+}
+
+/* ══════════════════════════════════════
+   О ФОРУМЕ
+   ══════════════════════════════════════ */
+.about { background: var(--c-cream); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+}
+.about-img-wrap {
+  position: relative;
+}
+.about-img-box {
+  width: 100%;
+  aspect-ratio: 4/3;
+  /* ↓ Фото для секции "О форуме" — замените путь */
+  background-image: url('registan-bg.jpg');
+  background-size: cover; background-position: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+.about-img-box::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(27,58,92,0.50) 0%, transparent 60%);
+  border-radius: var(--radius-lg);
+}
+.about-img-caption {
+  position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+  z-index: 2;
+  color: white; font-size: 0.88rem;
+  font-weight: 500;
+}
+.about-badge {
+  position: absolute; top: -16px; right: -16px;
+  background: var(--c-gold);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.about-badge .b-num {
+  font-family: var(--font-display);
+  font-size: 1.7rem; font-weight: 900;
+  color: white; line-height: 1;
+}
+.about-badge .b-lbl { font-size: 0.73rem; color: rgba(255,255,255,0.85); margin-top: 2px; }
+
+.about-features { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 1rem; }
+.feature-row {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-gray-light);
+  transition: box-shadow 0.2s;
+}
+.feature-row:hover { box-shadow: var(--shadow-sm); }
+.feature-icon {
+  width: 38px; height: 38px; flex-shrink: 0;
+  background: var(--c-gold-pale);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.feature-body h4 {
+  font-weight: 600; font-size: 0.93rem; margin-bottom: 2px; color: var(--c-navy);
+}
+.feature-body p { font-size: 0.83rem; color: var(--c-gray); line-height: 1.5; }
+
+/* ══════════════════════════════════════
+   ПРОГРАММА
+   ══════════════════════════════════════ */
+.program { background: white; }
+.prog-tabs {
+  display: flex; gap: 6px; margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--c-gray-light);
+}
+.tab-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.92rem; font-weight: 500;
+  color: var(--c-gray);
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.2s;
+  position: relative;
+}
+.tab-btn.active { color: var(--c-navy); font-weight: 700; }
+.tab-btn.active::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--c-gold); border-radius: 2px 2px 0 0;
+}
+.prog-day { display: none; }
+.prog-day.active { display: block; }
+.prog-item {
+  display: grid; grid-template-columns: 78px 1fr; gap: 1.2rem;
+  padding: 1rem 1rem;
+  border-radius: 10px; margin-bottom: 4px;
+  transition: background 0.2s;
+}
+.prog-item:hover { background: var(--c-cream); }
+.prog-time {
+  font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 700;
+  color: var(--c-gold); padding-top: 3px;
+}
+.prog-content h4 { font-weight: 600; color: var(--c-navy); margin-bottom: 3px; font-size: 0.93rem; }
+.prog-content p { font-size: 0.84rem; color: var(--c-gray); }
+.prog-tag {
+  display: inline-block;
+  font-size: 0.70rem; font-weight: 700; letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 9px; border-radius: 20px; margin-bottom: 5px;
+}
+.tag-plenary  { background: var(--c-gold-pale);  color: #8B6530; }
+.tag-panel    { background: var(--c-blue-light);  color: #1E5A8A; }
+.tag-workshop { background: #EAF5EE;               color: #1A6B3A; }
+.tag-break    { background: var(--c-gray-light);   color: #5A6878; }
+.tag-network  { background: #F0EBF8;               color: #6030A0; }
+
+/* ══════════════════════════════════════
+   СПИКЕРЫ
+   ══════════════════════════════════════ */
+.speakers { background: var(--c-blue-light); }
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.4rem;
+}
+.speaker-card {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(27,58,92,0.08);
+  transition: all 0.3s;
+}
+.speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.speaker-photo {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--c-navy) 0%, var(--c-blue) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; overflow: hidden; position: relative;
+}
+.speaker-photo img { width: 100%; height: 100%; object-fit: cover; }
+.speaker-body { padding: 1.1rem; }
+.speaker-name { font-weight: 700; color: var(--c-navy); font-size: 0.95rem; margin-bottom: 2px; }
+.speaker-role { font-size: 0.80rem; color: var(--c-gray); margin-bottom: 8px; line-height: 1.4; }
+.speaker-country {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.77rem; color: var(--c-gold); font-weight: 600;
+}
+
+/* ══════════════════════════════════════
+   РЕГИСТРАЦИЯ
+   ══════════════════════════════════════ */
+.registration { background: white; }
+.reg-layout {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;
+}
+.reg-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 700; color: var(--c-navy); margin-bottom: 1rem;
+}
+.reg-benefits { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 1.4rem; }
+.reg-benefits li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.88rem; color: var(--c-text);
+}
+.reg-benefits li::before {
+  content: '✦'; color: var(--c-gold); font-size: 0.75rem; margin-top: 4px; flex-shrink: 0;
+}
+.reg-deadline {
+  margin-top: 2rem;
+  background: var(--c-navy);
+  border-radius: var(--radius-md); padding: 1.2rem 1.5rem;
+}
+.reg-deadline .dl-lbl {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.55);
+}
+.reg-deadline .dl-date {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 700; color: var(--c-gold-light);
+}
+
+.reg-form {
+  background: var(--c-cream);
+  border-radius: var(--radius-lg); padding: 2.5rem;
+  border: 1px solid rgba(27,58,92,0.08);
+}
+.reg-form h3 {
+  font-weight: 700; font-size: 1.15rem; color: var(--c-navy); margin-bottom: 1.5rem;
+}
+.form-group { margin-bottom: 1.1rem; }
+.form-group label {
+  display: block; font-size: 0.83rem; font-weight: 600; color: var(--c-navy); margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: white;
+  border: 1.5px solid #DDE4EE;
+  border-radius: 9px;
+  padding: 10px 13px;
+  font-family: var(--font-body); font-size: 0.88rem;
+  color: var(--c-text); outline: none; transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--c-blue);
+  box-shadow: 0 0 0 3px rgba(45,107,160,0.10);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.form-submit {
+  width: 100%;
+  background: var(--c-navy); color: white;
+  border: none; padding: 13px;
+  border-radius: 9px;
+  font-family: var(--font-body); font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: all 0.25s; margin-top: 6px;
+}
+.form-submit:hover { background: var(--c-gold); transform: translateY(-1px); }
+.form-note {
+  font-size: 0.77rem; color: var(--c-gray); text-align: center; margin-top: 10px;
+}
+
+/* ══════════════════════════════════════
+   НОВОСТИ
+   ══════════════════════════════════════ */
+.news { background: var(--c-cream); }
+.news-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+.news-card {
+  background: white; border-radius: var(--radius-md);
+  overflow: hidden; border: 1px solid rgba(27,58,92,0.07);
+  transition: all 0.3s;
+}
+.news-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.news-img {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--c-navy) 0%, var(--c-blue) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; overflow: hidden;
+}
+.news-img img { width: 100%; height: 100%; object-fit: cover; }
+.news-body { padding: 1.3rem; }
+.news-date { font-size: 0.78rem; color: var(--c-gold); font-weight: 700; margin-bottom: 7px; }
+.news-title { font-weight: 700; color: var(--c-navy); font-size: 0.95rem; margin-bottom: 7px; line-height: 1.4; }
+.news-excerpt { font-size: 0.84rem; color: var(--c-gray); line-height: 1.6; }
+.news-more {
+  display: inline-block; margin-top: 12px;
+  font-size: 0.83rem; font-weight: 700;
+  color: var(--c-blue); text-decoration: none;
+}
+.news-more:hover { color: var(--c-gold); }
+
+/* ══════════════════════════════════════
+   ГАЛЕРЕЯ
+   ══════════════════════════════════════ */
+.gallery { background: white; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.gal-item {
+  border-radius: var(--radius-md); overflow: hidden;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--c-navy), var(--c-blue));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; cursor: pointer;
+  transition: transform 0.3s; position: relative;
+}
+.gal-item:hover { transform: scale(1.02); }
+.gal-item:nth-child(1) { grid-column: span 2; aspect-ratio: auto; height: 210px; }
+.gal-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(27,58,92,0.75), transparent);
+  padding: 10px 12px 10px;
+  color: white; font-size: 0.77rem; font-weight: 500;
+}
+
+/* ══════════════════════════════════════
+   ПАРТНЁРЫ
+   ══════════════════════════════════════ */
+.partners { background: var(--c-blue-light); padding: 3.5rem 1.5rem; }
+.partners-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+.partners-title {
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--c-gray); margin-bottom: 2rem;
+}
+.partners-logos {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  align-items: center; justify-content: center;
+}
+.partner-chip {
+  background: white; border: 1.5px solid rgba(27,58,92,0.10);
+  border-radius: 10px; padding: 12px 22px;
+  font-size: 0.88rem; font-weight: 700; color: var(--c-navy);
+  display: flex; align-items: center; gap: 7px;
+  min-width: 120px; justify-content: center;
+  transition: box-shadow 0.2s;
+}
+.partner-chip:hover { box-shadow: var(--shadow-sm); }
+
+/* ══════════════════════════════════════
+   FAQ
+   ══════════════════════════════════════ */
+.faq { background: white; }
+.faq-list { max-width: 740px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--c-gray-light); }
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.95rem; font-weight: 600; color: var(--c-navy);
+  text-align: left; padding: 1.2rem 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--c-gold); }
+.faq-arrow { font-size: 1rem; transition: transform 0.3s; flex-shrink: 0; color: var(--c-gray); }
+.faq-a {
+  font-size: 0.88rem; color: var(--c-gray); line-height: 1.75;
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 1rem; }
+.faq-item.open .faq-arrow { transform: rotate(180deg); color: var(--c-gold); }
+
+/* ══════════════════════════════════════
+   КОНТАКТЫ
+   ══════════════════════════════════════ */
+.contacts { background: var(--c-navy); }
+.contacts-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+}
+.contacts .section-eyebrow { color: var(--c-gold-light); }
+.contacts .section-title { color: white; }
+.contacts .section-sub { color: rgba(255,255,255,0.60); }
+.contact-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.contact-row {
+  display: flex; align-items: center; gap: 12px;
+  color: rgba(255,255,255,0.80); font-size: 0.88rem;
+}
+.contact-icon {
+  width: 38px; height: 38px;
+  background: rgba(184,137,74,0.18);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+}
+.contact-row a { color: var(--c-gold-light); text-decoration: none; }
+.contact-row a:hover { text-decoration: underline; }
+.socials { display: flex; gap: 9px; margin-top: 1.5rem; }
+.social-btn {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; text-decoration: none; color: white;
+  transition: background 0.2s;
+}
+.social-btn:hover { background: var(--c-gold); }
+.map-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-lg); padding: 2.5rem;
+  text-align: center; color: rgba(255,255,255,0.70);
+}
+.map-box .map-icon { font-size: 2.8rem; margin-bottom: 1rem; }
+.map-address { font-size: 0.87rem; line-height: 1.7; color: rgba(255,255,255,0.55); }
+.map-btn {
+  display: inline-block; margin-top: 1.3rem;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white; text-decoration: none;
+  padding: 10px 20px; border-radius: 9px;
+  font-size: 0.84rem; font-weight: 500;
+  transition: all 0.2s;
+}
+.map-btn:hover { background: var(--c-gold); border-color: var(--c-gold); }
+
+/* ══════════════════════════════════════
+   ФУТЕР
+   ══════════════════════════════════════ */
+footer {
+  background: #091929;
+  padding: 3rem 1.5rem 2rem;
+  color: rgba(255,255,255,0.45);
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 2rem;
+}
+.footer-brand p { font-size: 0.83rem; line-height: 1.7; color: rgba(255,255,255,0.45); margin-top: 1rem; max-width: 270px; }
+.footer-col h4 { font-size: 0.83rem; font-weight: 700; color: white; margin-bottom: 1rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.footer-col ul a { font-size: 0.81rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--c-gold-light); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem; font-size: 0.78rem;
+}
+
+/* ══════════════════════════════════════
+   МОДАЛЬНОЕ ОКНО
+   ══════════════════════════════════════ */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.55);
+  align-items: center; justify-content: center; padding: 1rem;
+}
+.modal-overlay.show { display: flex; }
+.modal-box {
+  background: white; border-radius: var(--radius-lg);
+  padding: 3rem; text-align: center; max-width: 400px; width: 100%;
+}
+.modal-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+.modal-box h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--c-navy); margin-bottom: 0.5rem; }
+.modal-box p { color: var(--c-gray); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.6; }
+.modal-close {
+  background: var(--c-navy); color: white;
+  border: none; border-radius: 9px; padding: 11px 26px;
+  font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; cursor: pointer;
+}
+
+/* ══════════════════════════════════════
+   АДАПТИВНОСТЬ (МОБИЛЬНЫЙ)
+   ══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  .hero-subtitle { margin: 0 auto 2rem; }
+  .hero-meta { justify-content: center; }
+  .hero-actions { justify-content: center; }
+  .about-grid, .reg-layout, .contacts-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-badge { top: auto; bottom: -14px; right: 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .gal-item:nth-child(1) { grid-column: span 2; }
+  .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 70px; left: 0; right: 0;
+    background: rgba(255,255,255,0.98);
+    border-bottom: 1px solid var(--c-gray-light);
+    padding: 0.5rem 1rem 1rem; gap: 0;
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.open a { color: var(--c-navy); padding: 10px 12px; }
+  .nav-links.open .nav-cta { background: var(--c-navy) !important; color: white !important; margin-top: 8px; text-align: center; }
+  .hamburger { display: flex; }
+  section { padding: 3.5rem 1.2rem; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .speakers-grid { grid-template-columns: repeat(2,1fr); }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gal-item:nth-child(1) { grid-column: 1; height: auto; }
+  .hero-card { display: none; } /* скрыть карточку на мобильном */
+  .hero-inner { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════
+   АНИМАЦИИ при появлении на экране
+   ══════════════════════════════════════ */
+.fade-up {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-badge">CA<br>EU</div>
+      <div class="nav-logo-text">
+        Youth Forum 2026
+        <span>Самарканд, Узбекистан</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"        data-ru="О форуме"   data-en="About">О форуме</a></li>
+      <li><a href="#program"      data-ru="Программа"  data-en="Program">Программа</a></li>
+      <li><a href="#speakers"     data-ru="Спикеры"    data-en="Speakers">Спикеры</a></li>
+      <li><a href="#news"         data-ru="Новости"    data-en="News">Новости</a></li>
+      <li><a href="#contacts"     data-ru="Контакты"   data-en="Contacts">Контакты</a></li>
+      <li><a href="#registration" class="nav-cta"
+             data-ru="Регистрация" data-en="Register">Регистрация</a></li>
+    </ul>
+
+    <div class="nav-lang">
+      <button class="active" onclick="setLang('ru', event)">RU</button>
+      <button onclick="setLang('en', event)">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="hero-inner">
+    <!-- Левая колонка — текст -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-dot"></span>
+        <span data-ru="Самарканд, Узбекистан · 13–14 августа 2026"
+              data-en="Samarkand, Uzbekistan · August 13–14, 2026">
+          Самарканд, Узбекистан · 13–14 августа 2026
+        </span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-ru="Центральноазиатско&#8209;" data-en="Central Asia –">Центральноазиатско&#8209;</span><br>
+        <span class="line-accent" data-ru="Европейский" data-en="European Union">Европейский</span><br>
+        <span data-ru="Молодёжный Форум" data-en="Youth Forum">Молодёжный Форум</span>
+      </h1>
+
+      <p class="hero-subtitle"
+         data-ru="Площадка для диалога молодых лидеров Центральной Азии и Европейского Союза. Два дня дискуссий, нетворкинга и решений для будущего региона."
+         data-en="A platform for dialogue between young leaders of Central Asia and the European Union. Two days of discussions, networking and solutions for the region's future.">
+        Площадка для диалога молодых лидеров Центральной Азии и Европейского Союза. Два дня дискуссий, нетворкинга и решений для будущего региона.
+      </p>
+
+      <div class="hero-meta">
+        <span class="hero-meta-chip">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span data-ru="Самарканд, Узбекистан" data-en="Samarkand, Uzbekistan">Самарканд, Узбекистан</span>
+        </span>
+        <span class="hero-meta-chip">
+          <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          <span>13–14 August 2026</span>
+        </span>
+        <span class="hero-meta-chip">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          <span data-ru="6 стран" data-en="6 Countries">6 стран</span>
+        </span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#registration" class="btn-primary"
+           data-ru="Зарегистрироваться →"
+           data-en="Register Now →">Зарегистрироваться →</a>
+        <a href="#program" class="btn-secondary"
+           data-ru="Смотреть программу"
+           data-en="View Program">Смотреть программу</a>
+      </div>
+    </div>
+
+    <!-- Правая колонка — инфо-карточка -->
+    <div class="hero-card">
+      <div class="hero-card-flags">
+        <div class="flag flag-uz"></div>
+        <div class="flag flag-eu">EU</div>
+        <div class="flag flag-kz"></div>
+        <div class="flag flag-kg"></div>
+        <div class="flag flag-tj"></div>
+        <div class="flag flag-tm"></div>
+      </div>
+
+      <div class="hero-stat-big">
+        <div class="num">300+</div>
+        <div class="lbl" data-ru="участников из 6 стран" data-en="participants from 6 countries">участников из 6 стран</div>
+      </div>
+
+      <hr class="hero-divider">
+
+      <div class="hero-dates">
+        <div class="date-box">
+          <div class="day">13</div>
+          <div class="mth" data-ru="Август · День 1" data-en="August · Day 1">Август · День 1</div>
+        </div>
+        <div class="date-box">
+          <div class="day">14</div>
+          <div class="mth" data-ru="Август · День 2" data-en="August · Day 2">Август · День 2</div>
+        </div>
+      </div>
+
+      <!-- Обратный отсчёт -->
+      <div class="countdown">
+        <div class="countdown-lbl" data-ru="До начала форума" data-en="Until Forum Starts">До начала форума</div>
+        <div class="countdown-nums">
+          <div class="cd-unit"><div class="n" id="cd-d">--</div><div class="l" data-ru="дней" data-en="days">дней</div></div>
+          <div class="cd-unit"><div class="n" id="cd-h">--</div><div class="l" data-ru="часов" data-en="hours">часов</div></div>
+          <div class="cd-unit"><div class="n" id="cd-m">--</div><div class="l" data-ru="минут" data-en="min">минут</div></div>
+          <div class="cd-unit"><div class="n" id="cd-s">--</div><div class="l" data-ru="секунд" data-en="sec">секунд</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Волна-переход в белый фон -->
+  <svg class="hero-wave" viewBox="0 0 1440 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 56 C480 0 960 0 1440 56 L1440 56 L0 56 Z" fill="white"/>
+  </svg>
+</section>
+
+<!-- ═══════════════════ СТАТИСТИКА ═══════════════════ -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <div class="stat-num">300+</div>
+      <div class="stat-lbl" data-ru="Участников" data-en="Participants">Участников</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl" data-ru="Стран-участниц" data-en="Participating Countries">Стран-участниц</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">20+</div>
+      <div class="stat-lbl" data-ru="Спикеров и экспертов" data-en="Speakers & Experts">Спикеров и экспертов</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">2</div>
+      <div class="stat-lbl" data-ru="Дня интенсивной работы" data-en="Days of Intensive Work">Дня интенсивной работы</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ О ФОРУМЕ ═══════════════════ -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-up">
+        <div class="about-img-box">
+          <!-- 🖼️ Замените путь на своё фото секции "О форуме" -->
+          <div class="about-img-caption">
+            🏛 Регистан — сердце Самарканда
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="b-num">2026</div>
+          <div class="b-lbl" data-ru="Год проведения" data-en="Forum Year">Год проведения</div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="section-eyebrow" data-ru="О ФОРУМЕ" data-en="ABOUT">О ФОРУМЕ</div>
+        <h2 class="section-title"
+            data-ru="Мост между двумя регионами"
+            data-en="A Bridge Between Two Regions">Мост между двумя регионами</h2>
+        <p class="section-sub"
+           data-ru="CA–EU Youth Forum — ежегодная международная платформа для молодых лидеров до 35 лет из стран Центральной Азии и Европейского Союза. Форум создаёт пространство для обмена опытом, совместной работы и формирования нового поколения лидеров."
+           data-en="CA–EU Youth Forum is an annual international platform for young leaders under 35 from Central Asian countries and the European Union. The forum creates space for experience sharing, collaborative work and shaping the next generation of leaders.">
+          CA–EU Youth Forum — ежегодная международная платформа для молодых лидеров до 35 лет из стран Центральной Азии и Европейского Союза. Форум создаёт пространство для обмена опытом, совместной работы и формирования нового поколения лидеров.
+        </p>
+        <div class="about-features">
+          <div class="feature-row">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-body">
+              <h4 data-ru="Диалог и дипломатия" data-en="Dialogue & Diplomacy">Диалог и дипломатия</h4>
+              <p data-ru="Площадка для открытого обсуждения ключевых вопросов сотрудничества ЦА и ЕС." data-en="A platform for open discussion of key CA-EU cooperation issues.">Площадка для открытого обсуждения ключевых вопросов сотрудничества ЦА и ЕС.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-body">
+              <h4 data-ru="Нетворкинг и карьера" data-en="Networking & Career">Нетворкинг и карьера</h4>
+              <p data-ru="Встречи с топ-экспертами, дипломатами и молодыми профессионалами из 6+ стран." data-en="Meetings with top experts, diplomats and young professionals from 6+ countries.">Встречи с топ-экспертами, дипломатами и молодыми профессионалами из 6+ стран.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">📚</div>
+            <div class="feature-body">
+              <h4 data-ru="Воркшопы и обучение" data-en="Workshops & Training">Воркшопы и обучение</h4>
+              <p data-ru="Практические сессии по лидерству, публичной политике, устойчивому развитию." data-en="Practical sessions on leadership, public policy and sustainable development.">Практические сессии по лидерству, публичной политике, устойчивому развитию.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon">🏆</div>
+            <div class="feature-body">
+              <h4 data-ru="Гранты и стипендии" data-en="Grants & Scholarships">Гранты и стипендии</h4>
+              <p data-ru="Стипендиальная программа для лучших участников — проезд и проживание." data-en="Scholarship program for the best participants — travel and accommodation.">Стипендиальная программа для лучших участников — проезд и проживание.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ПРОГРАММА ═══════════════════ -->
+<section class="program" id="program">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <div class="section-eyebrow" data-ru="ПРОГРАММА" data-en="PROGRAM">ПРОГРАММА</div>
+      <h2 class="section-title"
+          data-ru="Два дня насыщенной программы"
+          data-en="Two Days of Intensive Program">Два дня насыщенной программы</h2>
+    </div>
+
+    <div class="prog-tabs">
+      <button class="tab-btn active" onclick="switchDay(1)" id="tab1"
+              data-ru="13 августа — День 1"
+              data-en="August 13 — Day 1">13 августа — День 1</button>
+      <button class="tab-btn" onclick="switchDay(2)" id="tab2"
+              data-ru="14 августа — День 2"
+              data-en="August 14 — Day 2">14 августа — День 2</button>
+    </div>
+
+    <div class="prog-day active" id="day1">
+      <div class="prog-item">
+        <div class="prog-time">09:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-break" data-ru="Регистрация" data-en="Registration">Регистрация</span>
+          <h4 data-ru="Регистрация участников и приветственный кофе" data-en="Registration & Welcome Coffee">Регистрация участников и приветственный кофе</h4>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">10:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-plenary" data-ru="Пленарная сессия" data-en="Plenary">Пленарная сессия</span>
+          <h4 data-ru="Торжественное открытие форума" data-en="Solemn Opening Ceremony">Торжественное открытие форума</h4>
+          <p data-ru="Приветственные слова официальных лиц ЕС и Узбекистана, представление программы." data-en="Welcome speeches from EU and Uzbekistan officials, program introduction.">Приветственные слова официальных лиц ЕС и Узбекистана, представление программы.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">11:30</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-plenary">Keynote</span>
+          <h4 data-ru="ЦА и ЕС: новое измерение партнёрства" data-en="CA & EU: A New Dimension of Partnership">ЦА и ЕС: новое измерение партнёрства</h4>
+          <p data-ru="Ключевая лекция о перспективах сотрудничества двух регионов в 2026–2030 гг." data-en="Key lecture on CA-EU cooperation prospects for 2026–2030.">Ключевая лекция о перспективах сотрудничества двух регионов в 2026–2030 гг.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">13:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-break">🍽 Обед</span>
+          <h4 data-ru="Обед и неформальный нетворкинг" data-en="Lunch & Informal Networking">Обед и неформальный нетворкинг</h4>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">14:30</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-panel" data-ru="Панельная дискуссия" data-en="Panel">Панельная дискуссия</span>
+          <h4 data-ru="Молодёжь и зелёная трансформация" data-en="Youth & Green Transformation">Молодёжь и зелёная трансформация</h4>
+          <p data-ru="Дискуссия с экспертами по климату и устойчивому развитию." data-en="Discussion with climate and sustainable development experts.">Дискуссия с экспертами по климату и устойчивому развитию.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">16:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-workshop" data-ru="Воркшоп" data-en="Workshop">Воркшоп</span>
+          <h4 data-ru="Параллельные рабочие группы" data-en="Parallel Working Groups">Параллельные рабочие группы</h4>
+          <p data-ru="Цифровая экономика · Устойчивое развитие · Молодёжная политика" data-en="Digital Economy · Sustainable Development · Youth Policy">Цифровая экономика · Устойчивое развитие · Молодёжная политика</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">19:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-network" data-ru="Нетворкинг" data-en="Networking">Нетворкинг</span>
+          <h4 data-ru="Культурный вечер в Самарканде" data-en="Cultural Evening in Samarkand">Культурный вечер в Самарканде</h4>
+          <p data-ru="Торжественный приём с элементами узбекской культуры." data-en="Reception with elements of Uzbek national culture.">Торжественный приём с элементами узбекской культуры.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prog-day" id="day2">
+      <div class="prog-item">
+        <div class="prog-time">09:30</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-plenary">Keynote</span>
+          <h4 data-ru="Цифровая дипломатия и молодёжь" data-en="Digital Diplomacy & Youth">Цифровая дипломатия и молодёжь</h4>
+          <p data-ru="Как технологии меняют международные отношения." data-en="How technology is transforming international relations.">Как технологии меняют международные отношения.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">11:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-workshop" data-ru="Воркшоп" data-en="Workshop">Воркшоп</span>
+          <h4 data-ru="Лидерство и публичные коммуникации" data-en="Leadership & Public Communications">Лидерство и публичные коммуникации</h4>
+          <p data-ru="Практическая сессия с медиа-тренерами и политиками." data-en="Practical session with media trainers and politicians.">Практическая сессия с медиа-тренерами и политиками.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">13:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-break">🍽 Обед</span>
+          <h4 data-ru="Обед" data-en="Lunch">Обед</h4>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">14:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-panel" data-ru="Пленум" data-en="Plenary">Пленум</span>
+          <h4 data-ru="Самаркандская декларация молодёжи" data-en="Samarkand Youth Declaration">Самаркандская декларация молодёжи</h4>
+          <p data-ru="Презентация рекомендаций рабочих групп и принятие итогового документа." data-en="Presentation of working group recommendations and adoption of the final document.">Презентация рекомендаций рабочих групп и принятие итогового документа.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">16:00</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-plenary" data-ru="Закрытие" data-en="Closing">Закрытие</span>
+          <h4 data-ru="Торжественное закрытие и вручение сертификатов" data-en="Closing Ceremony & Certificates">Торжественное закрытие и вручение сертификатов</h4>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-time">17:30</div>
+        <div class="prog-content">
+          <span class="prog-tag tag-network" data-ru="Экскурсия" data-en="Tour">Экскурсия</span>
+          <h4 data-ru="Экскурсия по историческому центру Самарканда" data-en="Tour of Samarkand's Historical Center">Экскурсия по историческому центру Самарканда</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ СПИКЕРЫ ═══════════════════ -->
+<section class="speakers" id="speakers">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:3rem">
+      <div class="section-eyebrow" data-ru="СПИКЕРЫ" data-en="SPEAKERS">СПИКЕРЫ</div>
+      <h2 class="section-title"
+          data-ru="Эксперты и лидеры мнений"
+          data-en="Experts & Opinion Leaders">Эксперты и лидеры мнений</h2>
+      <p class="section-sub"
+         data-ru="Более 20 спикеров из Центральной Азии, Европейского Союза и международных организаций."
+         data-en="More than 20 speakers from Central Asia, the EU and international organizations.">
+        Более 20 спикеров из Центральной Азии, Европейского Союза и международных организаций.
+      </p>
+    </div>
+    <div class="speakers-grid">
+      <!-- 🖼️ Чтобы добавить фото спикера: замените emoji на <img src="..."> -->
+      <div class="speaker-card">
+        <div class="speaker-photo">🎓</div>
+        <div class="speaker-body">
+          <div class="speaker-name">Dr. Anna Kowalski</div>
+          <div class="speaker-role" data-ru="Директор по внешним связям ЕС" data-en="Director of EU External Relations">Директор по внешним связям ЕС</div>
+          <div class="speaker-country">🇪🇺 <span data-ru="Европейский Союз" data-en="European Union">Европейский Союз</span></div>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-photo" style="background:linear-gradient(135deg,#1eb6e8,#003399)">🏛</div>
+        <div class="speaker-body">
+          <div class="speaker-name" data-ru="Акбар Тошматов" data-en="Akbar Toshmatov">Акбар Тошматов</div>
+          <div class="speaker-role" data-ru="Заместитель министра молодёжи УЗ" data-en="Deputy Minister of Youth, UZ">Заместитель министра молодёжи УЗ</div>
+          <div class="speaker-country">🇺🇿 <span data-ru="Узбекистан" data-en="Uzbekistan">Узбекистан</span></div>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-photo" style="background:linear-gradient(135deg,#00AFCA,#1B3A5C)">💡</div>
+        <div class="speaker-body">
+          <div class="speaker-name">Prof. Mira Seitkali</div>
+          <div class="speaker-role" data-ru="Эксперт по климатической политике" data-en="Climate Policy Expert">Эксперт по климатической политике</div>
+          <div class="speaker-country">🇰🇿 <span data-ru="Казахстан" data-en="Kazakhstan">Казахстан</span></div>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-photo" style="background:linear-gradient(135deg,#2D5A8E,#1B3A5C)">🌍</div>
+        <div class="speaker-body">
+          <div class="speaker-name">Tobias Ehrmann</div>
+          <div class="speaker-role" data-ru="Директор фонда EU-CA Relations" data-en="Director, EU-CA Relations Foundation">Директор фонда EU-CA Relations</div>
+          <div class="speaker-country">🇩🇪 <span data-ru="Германия" data-en="Germany">Германия</span></div>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-photo" style="background:linear-gradient(135deg,#2A7A4B,#1B3A5C)">📊</div>
+        <div class="speaker-body">
+          <div class="speaker-name" data-ru="Гульнора Рашидова" data-en="Gulnora Rashidova">Гульнора Рашидова</div>
+          <div class="speaker-role" data-ru="Исследователь, ПРООН Узбекистан" data-en="Researcher, UNDP Uzbekistan">Исследователь, ПРООН Узбекистан</div>
+          <div class="speaker-country">🇺🇿 <span data-ru="Узбекистан" data-en="Uzbekistan">Узбекистан</span></div>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-photo" style="background:linear-gradient(135deg,#8B3A6B,#1B3A5C)">🎤</div>
+        <div class="speaker-body">
+          <div class="speaker-name">Ainur Bekova</div>
+          <div class="speaker-role" data-ru="Молодёжный активист, TEDx Speaker" data-en="Youth Activist, TEDx Speaker">Молодёжный активист, TEDx Speaker</div>
+          <div class="speaker-country">🇰🇬 <span data-ru="Кыргызстан" data-en="Kyrgyzstan">Кыргызстан</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <p style="color:var(--c-gray);font-size:0.88rem"
+         data-ru="Полный список спикеров будет объявлен в июне 2026"
+         data-en="Full speaker list to be announced in June 2026">Полный список спикеров будет объявлен в июне 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ РЕГИСТРАЦИЯ ═══════════════════ -->
+<section class="registration" id="registration">
+  <div class="section-inner">
+    <div class="reg-layout">
+      <div class="reg-info fade-up">
+        <div class="section-eyebrow" data-ru="РЕГИСТРАЦИЯ" data-en="REGISTRATION">РЕГИСТРАЦИЯ</div>
+        <h2 class="section-title"
+            data-ru="Стань участником форума"
+            data-en="Become a Forum Participant">Стань участником форума</h2>
+        <p class="section-sub"
+           data-ru="Форум открыт для молодых лидеров от 18 до 35 лет из стран Центральной Азии и ЕС. Участие бесплатное для отобранных кандидатов."
+           data-en="The forum is open to young leaders aged 18–35 from Central Asian countries and the EU. Participation is free for selected candidates.">
+          Форум открыт для молодых лидеров от 18 до 35 лет из стран Центральной Азии и ЕС. Участие бесплатное для отобранных кандидатов.
+        </p>
+        <ul class="reg-benefits">
+          <li data-ru="Бесплатное участие в двухдневной программе" data-en="Free participation in the two-day program">Бесплатное участие в двухдневной программе</li>
+          <li data-ru="Официальный сертификат участника" data-en="Official participation certificate">Официальный сертификат участника</li>
+          <li data-ru="Возможность получить стипендию (проезд + проживание)" data-en="Opportunity for a scholarship (travel + accommodation)">Возможность получить стипендию (проезд + проживание)</li>
+          <li data-ru="Нетворкинг с лидерами из 6 стран" data-en="Networking with leaders from 6 countries">Нетворкинг с лидерами из 6 стран</li>
+          <li data-ru="Культурная программа в Самарканде" data-en="Cultural program in Samarkand">Культурная программа в Самарканде</li>
+          <li data-ru="Рекомендательные письма от организаторов" data-en="Recommendation letters from organizers">Рекомендательные письма от организаторов</li>
+        </ul>
+        <div class="reg-deadline">
+          <div class="dl-lbl" data-ru="Дедлайн подачи заявок" data-en="Application Deadline">Дедлайн подачи заявок</div>
+          <div class="dl-date">30 июня 2026</div>
+        </div>
+      </div>
+
+      <div class="reg-form fade-up">
+        <h3 data-ru="Подать заявку" data-en="Apply Now">Подать заявку</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ru="Имя *" data-en="First Name *">Имя *</label>
+            <input type="text" id="firstName" placeholder="Иван" required>
+          </div>
+          <div class="form-group">
+            <label data-ru="Фамилия *" data-en="Last Name *">Фамилия *</label>
+            <input type="text" id="lastName" placeholder="Иванов" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-ru="Email *" data-en="Email *">Email *</label>
+          <input type="email" id="email" placeholder="ivan@example.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ru="Страна *" data-en="Country *">Страна *</label>
+            <select id="country" required>
+              <option value="">— выберите —</option>
+              <option data-ru="Узбекистан" data-en="Uzbekistan">Узбекистан</option>
+              <option data-ru="Казахстан" data-en="Kazakhstan">Казахстан</option>
+              <option data-ru="Кыргызстан" data-en="Kyrgyzstan">Кыргызстан</option>
+              <option data-ru="Таджикистан" data-en="Tajikistan">Таджикистан</option>
+              <option data-ru="Туркменистан" data-en="Turkmenistan">Туркменистан</option>
+              <option data-ru="Страна ЕС" data-en="EU Country">Страна ЕС</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-ru="Возраст (18–35) *" data-en="Age (18–35) *">Возраст (18–35) *</label>
+            <input type="number" id="age" min="18" max="35" placeholder="25">
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-ru="Организация / Университет" data-en="Organization / University">Организация / Университет</label>
+          <input type="text" id="org" placeholder="Ташкентский государственный университет">
+        </div>
+        <div class="form-group">
+          <label data-ru="Мотивационное письмо (до 500 слов) *" data-en="Motivation Letter (up to 500 words) *">Мотивационное письмо (до 500 слов) *</label>
+          <textarea id="motivation" rows="4" style="resize:vertical"
+            data-placeholder-ru="Расскажите, почему вы хотите участвовать..."
+            placeholder="Расскажите, почему вы хотите участвовать..."></textarea>
+        </div>
+        <div class="form-group" style="display:flex;align-items:flex-start;gap:10px">
+          <input type="checkbox" id="agree" style="width:auto;margin-top:4px;accent-color:var(--c-navy)">
+          <label for="agree" style="font-size:0.81rem;font-weight:400;color:var(--c-gray)"
+                 data-ru="Я согласен(а) с политикой обработки персональных данных"
+                 data-en="I agree to the personal data processing policy">
+            Я согласен(а) с политикой обработки персональных данных
+          </label>
+        </div>
+        <button class="form-submit" onclick="submitForm()"
+                data-ru="Отправить заявку →"
+                data-en="Submit Application →">Отправить заявку →</button>
+        <p class="form-note"
+           data-ru="Результаты отбора будут направлены на ваш email до 15 июля 2026"
+           data-en="Selection results will be sent to your email by July 15, 2026">
+          Результаты отбора будут направлены на ваш email до 15 июля 2026
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ НОВОСТИ ═══════════════════ -->
+<section class="news" id="news">
+  <div class="section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <div class="section-eyebrow" data-ru="НОВОСТИ" data-en="NEWS">НОВОСТИ</div>
+        <h2 class="section-title"
+            data-ru="Актуальные новости"
+            data-en="Latest News">Актуальные новости</h2>
+      </div>
+      <a href="#" style="font-size:0.88rem;font-weight:700;color:var(--c-blue);text-decoration:none"
+         data-ru="Все новости →" data-en="All news →">Все новости →</a>
+    </div>
+    <div class="news-grid">
+      <!-- 🖼️ Чтобы добавить фото: замените emoji-div на <img src="..."> -->
+      <div class="news-card">
+        <div class="news-img">📰</div>
+        <div class="news-body">
+          <div class="news-date">12 мая 2026</div>
+          <h3 class="news-title"
+              data-ru="Открыта регистрация на CA–EU Youth Forum 2026"
+              data-en="Registration Open for CA–EU Youth Forum 2026">Открыта регистрация на CA–EU Youth Forum 2026</h3>
+          <p class="news-excerpt"
+             data-ru="Принимаются заявки от молодых лидеров из 6 стран. Дедлайн — 30 июня 2026 года."
+             data-en="Applications are accepted from young leaders from 6 countries. Deadline — June 30, 2026.">Принимаются заявки от молодых лидеров из 6 стран. Дедлайн — 30 июня 2026 года.</p>
+          <a href="#" class="news-more" data-ru="Читать далее →" data-en="Read more →">Читать далее →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img" style="background:linear-gradient(135deg,#1B3A5C,#2D6BA0)">🤝</div>
+        <div class="news-body">
+          <div class="news-date">28 апреля 2026</div>
+          <h3 class="news-title"
+              data-ru="Делегация ЕС посетила Самарканд для подготовки форума"
+              data-en="EU Delegation Visited Samarkand to Prepare for Forum">Делегация ЕС посетила Самарканд для подготовки форума</h3>
+          <p class="news-excerpt"
+             data-ru="Переговоры о программе форума прошли в Самарканде с участием местных партнёров."
+             data-en="Negotiations on the forum program took place in Samarkand with local partners.">Переговоры о программе форума прошли в Самарканде с участием местных партнёров.</p>
+          <a href="#" class="news-more" data-ru="Читать далее →" data-en="Read more →">Читать далее →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img" style="background:linear-gradient(135deg,#2A7A4B,#1B3A5C)">🌱</div>
+        <div class="news-body">
+          <div class="news-date">15 апреля 2026</div>
+          <h3 class="news-title"
+              data-ru="Тема форума 2026: «Зелёный переход и молодёжь»"
+              data-en="Forum 2026 Theme: 'Green Transition & Youth'">Тема форума 2026: «Зелёный переход и молодёжь»</h3>
+          <p class="news-excerpt"
+             data-ru="Форум посвящён роли молодёжи в переходе к устойчивой экономике региона."
+             data-en="The forum is dedicated to the role of youth in the sustainable economic transition.">Форум посвящён роли молодёжи в переходе к устойчивой экономике региона.</p>
+          <a href="#" class="news-more" data-ru="Читать далее →" data-en="Read more →">Читать далее →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ГАЛЕРЕЯ ═══════════════════ -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <div class="section-eyebrow" data-ru="ГАЛЕРЕЯ" data-en="GALLERY">ГАЛЕРЕЯ</div>
+      <h2 class="section-title" data-ru="Форум в лицах" data-en="Forum in Pictures">Форум в лицах</h2>
+    </div>
+    <!-- 🖼️ Меняйте emoji на <img src="..."> для реальных фото -->
+    <div class="gallery-grid">
+      <div class="gal-item" style="background:linear-gradient(135deg,#1B3A5C,#2D6BA0)">
+        🎤
+        <div class="gal-caption" data-ru="Пленарная сессия 2025" data-en="Plenary Session 2025">Пленарная сессия 2025</div>
+      </div>
+      <div class="gal-item" style="background:linear-gradient(135deg,#2D6BA0,#1B3A5C)">🤝</div>
+      <div class="gal-item" style="background:linear-gradient(135deg,#B8894A,#7A5C28)">🌟</div>
+      <div class="gal-item" style="background:linear-gradient(135deg,#1B3A5C,#0F2540)">📸</div>
+      <div class="gal-item" style="background:linear-gradient(135deg,#1eb6e8,#003399)">🌍</div>
+      <div class="gal-item" style="background:linear-gradient(135deg,#2A7A4B,#1B3A5C)">🏛</div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="#" class="btn-dark"
+         data-ru="Все фотографии →"
+         data-en="All Photos →">Все фотографии →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ПАРТНЁРЫ ═══════════════════ -->
+<div class="partners">
+  <div class="partners-inner">
+    <div class="partners-title"
+         data-ru="ОРГАНИЗАТОРЫ И ПАРТНЁРЫ"
+         data-en="ORGANIZERS & PARTNERS">ОРГАНИЗАТОРЫ И ПАРТНЁРЫ</div>
+    <div class="partners-logos">
+      <div class="partner-chip">🇪🇺 European Union</div>
+      <div class="partner-chip">🇺🇿 Узбекистан</div>
+      <div class="partner-chip">🌐 UNDP</div>
+      <div class="partner-chip">📚 UNESCO</div>
+      <div class="partner-chip">🤝 OSCE</div>
+      <div class="partner-chip">🌱 GIZ</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title"
+          data-ru="Часто задаваемые вопросы"
+          data-en="Frequently Asked Questions">Часто задаваемые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-ru="Кто может подать заявку на форум?" data-en="Who can apply to the forum?">Кто может подать заявку на форум?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a"
+             data-ru="Форум открыт для молодых лидеров от 18 до 35 лет из Узбекистана, Казахстана, Кыргызстана, Таджикистана, Туркменистана и стран ЕС. Приветствуются студенты, молодые специалисты, НКО-активисты и предприниматели."
+             data-en="The forum is open to young leaders aged 18–35 from Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan and EU member states.">
+          Форум открыт для молодых лидеров от 18 до 35 лет из Узбекистана, Казахстана, Кыргызстана, Таджикистана, Туркменистана и стран ЕС. Приветствуются студенты, молодые специалисты, НКО-активисты и предприниматели.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-ru="Сколько стоит участие?" data-en="How much does participation cost?">Сколько стоит участие?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a"
+             data-ru="Участие в форуме бесплатное для всех отобранных участников. Лучшие кандидаты получат стипендию, покрывающую проезд и проживание в Самарканде."
+             data-en="Participation is free for all selected candidates. The best candidates will receive a scholarship covering travel and accommodation in Samarkand.">
+          Участие в форуме бесплатное для всех отобранных участников. Лучшие кандидаты получат стипендию, покрывающую проезд и проживание в Самарканде.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-ru="На каком языке проходит форум?" data-en="What language is the forum in?">На каком языке проходит форум?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a"
+             data-ru="Рабочие языки форума — русский и английский. Синхронный перевод доступен на пленарных сессиях."
+             data-en="The working languages are Russian and English. Simultaneous interpretation is available at plenary sessions.">
+          Рабочие языки форума — русский и английский. Синхронный перевод доступен на пленарных сессиях.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-ru="Как узнать результаты отбора?" data-en="How to learn the selection results?">Как узнать результаты отбора?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a"
+             data-ru="Результаты будут направлены на email, указанный в заявке, до 15 июля 2026 года. Все заявители получат уведомление."
+             data-en="Results will be sent to the email provided in the application by July 15, 2026. All applicants will receive a notification.">
+          Результаты будут направлены на email, указанный в заявке, до 15 июля 2026 года. Все заявители получат уведомление.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-ru="Нужна ли виза для участия?" data-en="Is a visa required to participate?">Нужна ли виза для участия?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a"
+             data-ru="Гражданам большинства стран ЕС виза не нужна (безвизовый режим или e-Visa). Организаторы помогут с официальным приглашением при необходимости."
+             data-en="Citizens of most EU countries do not need a visa (visa-free or e-Visa). Organizers will help with official invitations if needed.">
+          Гражданам большинства стран ЕС виза не нужна (безвизовый режим или e-Visa). Организаторы помогут с официальным приглашением при необходимости.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ КОНТАКТЫ ═══════════════════ -->
+<section class="contacts" id="contacts">
+  <div class="section-inner">
+    <div class="contacts-grid">
+      <div>
+        <div class="section-eyebrow" data-ru="КОНТАКТЫ" data-en="CONTACTS">КОНТАКТЫ</div>
+        <h2 class="section-title"
+            data-ru="Свяжитесь с нами"
+            data-en="Get in Touch">Свяжитесь с нами</h2>
+        <p class="section-sub"
+           data-ru="Есть вопросы? Мы рады помочь. Пишите нам — отвечаем в течение 24 часов."
+           data-en="Have questions? We're happy to help. Write to us — we reply within 24 hours.">
+          Есть вопросы? Мы рады помочь. Пишите нам — отвечаем в течение 24 часов.
+        </p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="contact-icon">📧</div>
+            <div><a href="mailto:info@cayouthforum.uz">info@cayouthforum.uz</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📞</div>
+            <div>+998 71 000 00 00</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div data-ru="Самарканд, Узбекистан · Отель «Шёлковый путь»" data-en="Samarkand, Uzbekistan · Silk Road Hotel">Самарканд, Узбекистан · Отель «Шёлковый путь»</div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#" class="social-btn" title="Telegram">✈</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="#" class="social-btn" title="LinkedIn">💼</a>
+          <a href="#" class="social-btn" title="Facebook">👥</a>
+        </div>
+      </div>
+      <div class="map-box">
+        <div class="map-icon">🗺</div>
+        <p style="color:white;font-weight:600;margin-bottom:8px"
+           data-ru="Место проведения" data-en="Venue">Место проведения</p>
+        <div class="map-address"
+             data-ru="Отель «Шёлковый путь»<br>пр. Ислама Каримова, 1<br>Самарканд, Узбекистан 140100<br><br>Конференц-центр · 2-й этаж<br>Залы A, B, C"
+             data-en="Silk Road Hotel<br>1 Islam Karimov Ave<br>Samarkand, Uzbekistan 140100<br><br>Conference Center · 2nd Floor<br>Halls A, B, C">
+          Отель «Шёлковый путь»<br>пр. Ислама Каримова, 1<br>Самарканд, Узбекистан 140100<br><br>Конференц-центр · 2-й этаж<br>Залы A, B, C
+        </div>
+        <a href="https://maps.google.com/?q=Samarkand,Uzbekistan"
+           target="_blank" class="map-btn"
+           data-ru="Открыть в Google Maps →"
+           data-en="Open in Google Maps →">Открыть в Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ФУТЕР ═══════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem">
+          <div style="width:34px;height:34px;background:var(--c-gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:white;line-height:1.3;text-align:center">CA<br>EU</div>
+          <span style="color:white;font-weight:600;font-size:0.95rem">Youth Forum 2026</span>
+        </div>
+        <p data-ru="Центральноазиатско-Европейский молодёжный форум — ежегодная международная площадка для молодых лидеров двух регионов."
+           data-en="Central Asia–European Union Youth Forum is an annual international platform for young leaders from two regions.">
+          Центральноазиатско-Европейский молодёжный форум — ежегодная международная площадка для молодых лидеров двух регионов.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 data-ru="Навигация" data-en="Navigation">Навигация</h4>
+        <ul>
+          <li><a href="#about"    data-ru="О форуме"   data-en="About">О форуме</a></li>
+          <li><a href="#program"  data-ru="Программа"  data-en="Program">Программа</a></li>
+          <li><a href="#speakers" data-ru="Спикеры"    data-en="Speakers">Спикеры</a></li>
+          <li><a href="#news"     data-ru="Новости"    data-en="News">Новости</a></li>
+          <li><a href="#gallery"  data-ru="Галерея"    data-en="Gallery">Галерея</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-ru="Участие" data-en="Participation">Участие</h4>
+        <ul>
+          <li><a href="#registration" data-ru="Регистрация"              data-en="Registration">Регистрация</a></li>
+          <li><a href="#faq"          data-ru="FAQ"                       data-en="FAQ">FAQ</a></li>
+          <li><a href="#contacts"     data-ru="Контакты"                  data-en="Contacts">Контакты</a></li>
+          <li><a href="#"             data-ru="Политика конфиденциальности" data-en="Privacy Policy">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CA–EU Youth Forum. <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span></span>
+      <span>🇺🇿 <span data-ru="Самарканд, Узбекистан" data-en="Samarkand, Uzbekistan">Самарканд, Узбекистан</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО — успешная регистрация -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="modal-icon">✅</div>
+    <h3 data-ru="Заявка отправлена!" data-en="Application Sent!">Заявка отправлена!</h3>
+    <p data-ru="Спасибо! Результаты отбора придут на ваш email до 15 июля 2026 года. Удачи!" data-en="Thank you! Selection results will be sent to your email by July 15, 2026. Good luck!">
+      Спасибо! Результаты отбора придут на ваш email до 15 июля 2026 года. Удачи!
+    </p>
+    <button class="modal-close"
+            onclick="document.getElementById('successModal').classList.remove('show')"
+            data-ru="Закрыть" data-en="Close">Закрыть</button>
+  </div>
+</div>
+
+<!-- ═══════════════════ JAVASCRIPT ═══════════════════ -->
+<script>
+/* ── ОБРАТНЫЙ ОТСЧЁТ ─────────────────────────────────
+   🕐 Чтобы изменить дату: замените '2026-08-13' ниже */
+function updateCountdown() {
+  const target = new Date('2026-08-13T09:00:00+05:00');
+  const diff = target - new Date();
+  if (diff <= 0) {
+    ['cd-d','cd-h','cd-m','cd-s'].forEach(id => document.getElementById(id).textContent='00');
+    return;
+  }
+  const pad = n => String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('cd-d').textContent = pad(diff/86400000);
+  document.getElementById('cd-h').textContent = pad((diff%86400000)/3600000);
+  document.getElementById('cd-m').textContent = pad((diff%3600000)/60000);
+  document.getElementById('cd-s').textContent = pad((diff%60000)/1000);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ── ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ───────────────────────────── */
+let currentLang = 'ru';
+function setLang(lang, e) {
+  currentLang = lang;
+  document.querySelectorAll('[data-ru]').forEach(el => {
+    const txt = el.getAttribute('data-' + lang);
+    if (txt) el.innerHTML = txt;
+  });
+  /* Плейсхолдеры textarea */
+  document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+    el.placeholder = el.getAttribute('data-placeholder-' + lang);
+  });
+  document.querySelectorAll('.nav-lang button').forEach(b => b.classList.remove('active'));
+  if (e && e.target) e.target.classList.add('active');
+}
+
+/* ── ПЕРЕКЛЮЧЕНИЕ ДНЕЙ ПРОГРАММЫ ─────────────────── */
+function switchDay(n) {
+  document.querySelectorAll('.prog-day').forEach(d => d.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('day' + n).classList.add('active');
+  document.getElementById('tab' + n).classList.add('active');
+}
+
+/* ── FAQ АККОРДЕОН ───────────────────────────────── */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+/* ── ОТПРАВКА ФОРМЫ ──────────────────────────────── */
+function submitForm() {
+  const fn = document.getElementById('firstName').value.trim();
+  const em = document.getElementById('email').value.trim();
+  const ag = document.getElementById('agree').checked;
+  if (!fn || !em) {
+    alert(currentLang === 'ru' ? 'Заполните обязательные поля (Имя и Email)' : 'Please fill in required fields (Name and Email)');
+    return;
+  }
+  if (!ag) {
+    alert(currentLang === 'ru' ? 'Необходимо согласиться с политикой конфиденциальности' : 'Please agree to the privacy policy');
+    return;
+  }
+  document.getElementById('successModal').classList.add('show');
+}
+
+/* ── ГАМБУРГЕР (мобильное меню) ──────────────────── */
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* ── АНИМАЦИИ ПОЯВЛЕНИЯ ──────────────────────────── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+/* ── ЗАКРЫТЬ МОДАЛКУ ПО КЛИКУ НА ФОН ────────────── */
+document.getElementById('successModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('show');
+});
+</script>
+</body>
+</html>
